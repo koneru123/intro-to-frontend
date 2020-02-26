@@ -1,0 +1,10 @@
+/* YOUR CSS HERE */
+.container {
+    display: flex;
+}
+
+.box {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
