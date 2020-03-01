@@ -8,7 +8,17 @@ const generateRandomColorValue = () => {
 };
 //
 $(document).ready(function(){
-  console.log("Welcome to jquery!\n", $());
+  //console.log("Welcome to jquery!\n", $());
   /* YOUR CODE HERE */
-
+  //var container = $('.container');
+  //var boxContainer = $('.box');
+  $('#randBtn').click(function() {
+    $('.box').each(function() {
+      $(this).css("background-color", generateRandomColorValue());
+    })
+  }),
+  $('#addBtn').click(function(){
+    $('<div class="box"></div>').appendTo('.container');
+    $('<div class="box"></div>').css("background-color", generateRandomColorValue());
+  })
 });
