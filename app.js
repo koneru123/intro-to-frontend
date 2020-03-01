@@ -12,13 +12,17 @@ $(document).ready(function(){
   /* YOUR CODE HERE */
   //var container = $('.container');
   //var boxContainer = $('.box');
-  $('#randBtn').click(function() {
+  const colorFunction = function() {
     $('.box').each(function() {
       $(this).css("background-color", generateRandomColorValue());
     })
+  };
+  $('#randBtn').click(function() {
+    colorFunction();
   }),
   $('#addBtn').click(function(){
-    $('<div class="box"></div>').appendTo('.container');
-    $('<div class="box"></div>').css("background-color", generateRandomColorValue());
+    const st = 'background-color:' + generateRandomColorValue();
+    $('<div class="box" style="'+ st +'"></div>').appendTo('.container');
+
   })
 });
